@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'flo.ryan'
+version = '1.0.0'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    // JUnit 5 (JUnit Jupiter)
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+
+    // Mockito for mocking in tests
+    testImplementation 'org.mockito:mockito-core:5.2.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.2.0'
+
+    // Hamcrest for assertions
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+
+    // To support Java 8 time (if needed for tests)
+    implementation 'org.threeten:threetenbp:1.5.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'flo.ryan.Application'
+}
