@@ -25,7 +25,7 @@ dependencies {
     testImplementation 'org.mockito:mockito-junit-jupiter:5.2.0'
 
     // Hamcrest for assertions
-    testImplementation 'org.hamcrest:hamcrest:2.2'
+    testImplementation 'org.hamcrest:hamcrest:3.0'
 
     // To support Java 8 time (if needed for tests)
     implementation 'org.threeten:threetenbp:1.5.2'
